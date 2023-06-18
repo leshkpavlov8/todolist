@@ -12,7 +12,9 @@
     <li>выгулить собаку</li>
     <li>сходить в магазин</li>
      <li>поспать</li>
-
+    {%for todo in todo_list %}
+    <li>{{todo}}</li>
+    {% endfor %}
 </ol>
 </body>
 </html>

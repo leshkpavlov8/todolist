@@ -17,10 +17,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.views.generic import TemplateView
+from core.views import monday
+from core.views import thuersday
+from core.views import main
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', TemplateView.as_view(template_name='main.html')),
-    path('monday', TemplateView.as_view(template_name='monday.html')),
-    path('thuersday', TemplateView.as_view(template_name='thuersday.html'))
+    path('', main),
+    path('monday', monday),
+    path('thuersday',thuersday)
+
 ]
